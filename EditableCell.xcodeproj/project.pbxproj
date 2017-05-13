@@ -15,6 +15,8 @@
 		D9B8B45D1EC6DA13001E662A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B8B45B1EC6DA13001E662A /* LaunchScreen.storyboard */; };
 		D9B8B4681EC6DA13001E662A /* EditableCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B8B4671EC6DA13001E662A /* EditableCellTests.m */; };
 		D9B8B4731EC6DA13001E662A /* EditableCellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B8B4721EC6DA13001E662A /* EditableCellUITests.m */; };
+		D9B8B4851EC6DA8E001E662A /* EditableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B8B4841EC6DA8E001E662A /* EditableCell.m */; };
+		D9B8B4881EC6DAC1001E662A /* EditableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B8B4871EC6DAC1001E662A /* EditableCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		D9B8B46E1EC6DA13001E662A /* EditableCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditableCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B8B4721EC6DA13001E662A /* EditableCellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditableCellUITests.m; sourceTree = "<group>"; };
 		D9B8B4741EC6DA13001E662A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B8B4831EC6DA8E001E662A /* EditableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableCell.h; sourceTree = "<group>"; };
+		D9B8B4841EC6DA8E001E662A /* EditableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableCell.m; sourceTree = "<group>"; };
+		D9B8B4861EC6DAC1001E662A /* EditableCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableCellModel.h; sourceTree = "<group>"; };
+		D9B8B4871EC6DAC1001E662A /* EditableCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,11 @@
 		D9B8B44C1EC6DA13001E662A /* EditableCell */ = {
 			isa = PBXGroup;
 			children = (
+				D9B8B4821EC6DA36001E662A /* Model */,
+				D9B8B4811EC6DA31001E662A /* View */,
+				D9B8B4801EC6DA25001E662A /* Controller */,
 				D9B8B4501EC6DA13001E662A /* AppDelegate.h */,
 				D9B8B4511EC6DA13001E662A /* AppDelegate.m */,
-				D9B8B4531EC6DA13001E662A /* ViewController.h */,
-				D9B8B4541EC6DA13001E662A /* ViewController.m */,
 				D9B8B4561EC6DA13001E662A /* Main.storyboard */,
 				D9B8B4591EC6DA13001E662A /* Assets.xcassets */,
 				D9B8B45B1EC6DA13001E662A /* LaunchScreen.storyboard */,
@@ -138,6 +145,33 @@
 				D9B8B4741EC6DA13001E662A /* Info.plist */,
 			);
 			path = EditableCellUITests;
+			sourceTree = "<group>";
+		};
+		D9B8B4801EC6DA25001E662A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9B8B4531EC6DA13001E662A /* ViewController.h */,
+				D9B8B4541EC6DA13001E662A /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D9B8B4811EC6DA31001E662A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9B8B4831EC6DA8E001E662A /* EditableCell.h */,
+				D9B8B4841EC6DA8E001E662A /* EditableCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D9B8B4821EC6DA36001E662A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9B8B4861EC6DAC1001E662A /* EditableCellModel.h */,
+				D9B8B4871EC6DAC1001E662A /* EditableCellModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +313,8 @@
 				D9B8B4551EC6DA13001E662A /* ViewController.m in Sources */,
 				D9B8B4521EC6DA13001E662A /* AppDelegate.m in Sources */,
 				D9B8B44F1EC6DA13001E662A /* main.m in Sources */,
+				D9B8B4851EC6DA8E001E662A /* EditableCell.m in Sources */,
+				D9B8B4881EC6DAC1001E662A /* EditableCellModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YUSZJ893SU;
 				INFOPLIST_FILE = EditableCell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KuaiJianKang.EditableCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +478,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YUSZJ893SU;
 				INFOPLIST_FILE = EditableCell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KuaiJianKang.EditableCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +554,7 @@
 				D9B8B4791EC6DA13001E662A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9B8B47A1EC6DA13001E662A /* Build configuration list for PBXNativeTarget "EditableCellTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +563,7 @@
 				D9B8B47C1EC6DA13001E662A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9B8B47D1EC6DA13001E662A /* Build configuration list for PBXNativeTarget "EditableCellUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +572,7 @@
 				D9B8B47F1EC6DA13001E662A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
